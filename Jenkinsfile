@@ -21,4 +21,11 @@ v1.3''', description: 'What to deploy?')
       }
     }
   }
+  post {
+    aborted {
+      echo 'Why didn\'t you push my button?'
+      
+    }
+    
+  }
 }
