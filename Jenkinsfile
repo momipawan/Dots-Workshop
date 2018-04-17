@@ -3,11 +3,16 @@ pipeline {
   stages {
     stage('Hello') {
       steps {
-        echo "Name ${params.Name}!"
+        echo 'hello'
       }
     }
-  }
-  parameters {
-    string(name: 'Name', defaultValue: 'whoever you are', description: 'Who should I say hi to?')
+    stage('Deploy') {
+      input {
+        message 'Should we continue?'
+      }
+      steps {
+        echo 'Continuing with deployment'
+      }
+    }
   }
 }
