@@ -3,13 +3,9 @@ pipeline {
   stages {
     stage('Hello') {
       steps {
-        echo "Hello ${MY_NAME}"
-        echo "Hello ${params.Name}!"
+        echo "Name ${params.Name}!"
       }
     }
-  }
-  environment {
-    MY_NAME = 'Pawan'
   }
   parameters {
     string(name: 'Name', defaultValue: 'whoever you are', description: 'Who should I say hi to?')
