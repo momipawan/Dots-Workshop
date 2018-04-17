@@ -10,9 +10,6 @@ pipeline {
       options {
         timeout(time: 10, unit: 'MINUTES')
       }
-      input {
-        message 'Should we continue?'
-      }
       steps {
         echo 'Continuing with deployment'
       }
