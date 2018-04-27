@@ -7,14 +7,15 @@ pipeline {
       }
     }
     stage('Build') {
+  
       parallel {
         stage('Build') {
           steps {
             echo 'Build Is running'
-            timeout(time: 2200, unit: "SECONDS")
           }
         }
         stage('Unit-Test') {
+        timeout(time: 1500, unit: "SECONDS")
           steps {
             echo 'Unit Testing is completed'
           }
