@@ -15,7 +15,9 @@ pipeline {
           }
         }
         stage('Unit-Test') {
-        timeout(time: 1500, unit: "SECONDS")
+        options {
+          timeout(time: 1000, unit: 'SECONDS')
+        }
           steps {
             echo 'Unit Testing is completed'
           }
