@@ -11,6 +11,7 @@ pipeline {
         stage('Build') {
           steps {
             echo 'Build Is running'
+            timeout(time: 2200, unit: "SECONDS")
           }
         }
         stage('Unit-Test') {
